@@ -35,7 +35,7 @@ export const Hero = () => {
             Gain 99 Powerful Bots To Automate 90% Of Your Tasks and Slash $10k in Costs in 2025 For Just $1
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Get for free</button>
+              <button className="btn btn-primary">Get for $1</button>
               <button className="btn btn-text flex gap-1">
                 <span>Learn more</span>
                 {/* <ArrowIcon classname="h-2 w-2" /> */}

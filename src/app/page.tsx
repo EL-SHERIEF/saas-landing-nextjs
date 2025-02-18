@@ -7,6 +7,7 @@ import { Pricing } from "@/sections/Pricing";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Testimonials } from "@/sections/Testimonials";
 import { Features } from "@/sections/Features";
+import TrialSection from "@/sections/TrialSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProductShowcase />
       <Features />
       <Pricing />
+      <TrialSection />
       <Testimonials />
       <CallToAction />
       <Footer />

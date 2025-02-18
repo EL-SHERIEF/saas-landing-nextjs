@@ -18,10 +18,9 @@ export const CallToAction = () => {
     <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
         <div className="section-heading relative">
-          <h2 className="section-title">Sign up for free today</h2>
+          <h2 className="section-title">For just 1$</h2>
           <p className="section-des mt-5">
-            Celebrate the joy of accomplishment with an app designed to track your progress and motivate your
-            efforts.
+          AI Pro University is committed to educating over 1 million students, ushering in an era of hyper-abundance. By providing affordable access to AI tools and training, the platform empowers individuals to harness AI's full potential in their personal and professional lives.
           </p>
 
           <motion.img
@@ -45,7 +44,7 @@ export const CallToAction = () => {
         </div>
 
         <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Get for free</button>
+          <button className="btn btn-primary">Get for 1$</button>
           <button className="btn btn-text gap-1">
             <span>Learn more</span>
             <ArrowRight className="h-5 w-5" />

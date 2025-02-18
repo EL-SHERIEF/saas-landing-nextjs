@@ -1,5 +1,5 @@
 "use client";
-import productImage from "@/assets/product-image.png";
+import productImage from "@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp";
 import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
 import Image from "next/image";
@@ -32,7 +32,7 @@ export const ProductShowcase = () => {
         </div>
 
         <div className="relative">
-          <Image src={productImage} alt="Product image" className="mt-10" />
+          <Image src={productImage} alt="Product image" className="mt-10 rounded-2xl max-h-[600px] object-cover" />
           <motion.img
             src={pyramidImage.src}
             alt="Pyramid image"

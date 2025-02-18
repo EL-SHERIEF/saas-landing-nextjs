@@ -15,59 +15,59 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    imageSrc: avatar1.src,
-    name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    "text": "These AI bots have completely changed how I work! Automation has saved me countless hours every week.",
+    "imageSrc": avatar1.src,
+    "name": "Jamie Rivera",
+    "username": "@jamietechguru00"
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
-    imageSrc: avatar2.src,
-    name: "Josh Smith",
-    username: "@jjsmith",
+    "text": "Our team's productivity has skyrocketed since we started using these AI bots. Tasks that took hours now take minutes!",
+    "imageSrc": avatar2.src,
+    "name": "Josh Smith",
+    "username": "@jjsmith"
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
-    imageSrc: avatar3.src,
-    name: "Morgan Lee",
-    username: "@morganleewhiz",
+    "text": "This AI automation tool has streamlined my entire workflow. Managing projects has never been this easy!",
+    "imageSrc": avatar3.src,
+    "name": "Morgan Lee",
+    "username": "@morganleewhiz"
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
-    imageSrc: avatar4.src,
-    name: "Casey Jordan",
-    username: "@caseyj",
+    "text": "I was amazed at how quickly we integrated these AI bots into our daily processes. Game-changer!",
+    "imageSrc": avatar4.src,
+    "name": "Casey Jordan",
+    "username": "@caseyj"
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
-    imageSrc: avatar5.src,
-    name: "Taylor Kim",
-    username: "@taylorkimm",
+    "text": "Handling multiple clients and projects is now effortless. AI automation keeps everything running smoothly.",
+    "imageSrc": avatar5.src,
+    "name": "Taylor Kim",
+    "username": "@taylorkimm"
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
-    imageSrc: avatar6.src,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    "text": "The customization and integration capabilities of these AI bots are top-notch. Perfect for scaling businesses!",
+    "imageSrc": avatar6.src,
+    "name": "Riley Smith",
+    "username": "@rileysmith1"
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
-    imageSrc: avatar7.src,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    "text": "Since adopting AI automation, our team collaboration has improved drastically. No more repetitive tasks!",
+    "imageSrc": avatar7.src,
+    "name": "Jordan Patels",
+    "username": "@jpatelsdesign"
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
-    imageSrc: avatar8.src,
-    name: "Sam Dawson",
-    username: "@dawsontechtips",
+    "text": "With these AI bots, we can easily assign tasks, track progress, and automate repetitive work in one place.",
+    "imageSrc": avatar8.src,
+    "name": "Sam Dawson",
+    "username": "@dawsontechtips"
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
-    imageSrc: avatar9.src,
-    name: "Casey Harper",
-    username: "@casey09",
-  },
+    "text": "This tool's intuitive interface and powerful AI features help me stay ahead in my industry!",
+    "imageSrc": avatar9.src,
+    "name": "Casey Harper",
+    "username": "@casey09"
+  }
 ];
 
 const firstColumn = testimonials.slice(0, 3);
@@ -91,7 +91,7 @@ const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-6 pb-6"
+        className="flex flex-col gap-6 pb-6 "
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (
@@ -124,7 +124,7 @@ const TestimonialsColumn = (props: {
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white pt-32">
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
@@ -133,8 +133,8 @@ export const Testimonials = () => {
 
           <h2 className="section-title mt-5">What our users say</h2>
           <p className="section-des mt-5">
-            From intuitive design to powerful features, out app has become an essential tool for users around
-            the world.
+            From intuitive task management to powerful integrations, our app has become an essential tool for users
+            around the world.
           </p>
         </div>
 
