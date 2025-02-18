@@ -2,8 +2,8 @@
 import { useState } from 'react';
 
 const StatsCard = ({ value, label }) => (
-  <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center">
-    <div className="text-3xl font-semibold text-slate-950  mb-2">{value}</div>
+  <div className=" backdrop-blur-sm rounded-xl p-6 text-center border border-white/10">
+    <div className="text-3xl font-semibold text-white  mb-2">{value}</div>
     <div className="text-zinc-400 text-sm">{label}</div>
   </div>
 );
@@ -27,14 +27,14 @@ export default function TrialSection() {
   return (
     <div className=" bg-white px-4 py-24 !max-w-screen">
       <div className="max-w-3xl mx-auto">
-        <div className="backdrop-blur-sm bg-white/50 rounded-3xl border border-zinc-800/10 p-12">
+        <div className="backdrop-blur-sm bg-gradient-to-t from-[#000000] to-[#09102c] rounded-3xl border border-zinc-800/10 p-12">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-black mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 mb-6">
               <span className="text-green-400">⚡</span>
-              <span className="text-zinc-300 text-sm">Follow us for more</span>
+              <span className="text-white text-sm">Follow us for more</span>
             </div>
-            <h2 className="text-4xl font-semibold text-slate-950 mb-4">Keep Up With AI</h2>
+            <h2 className="text-4xl font-semibold text-white mb-4">Keep Up With AI</h2>
             <p className="text-zinc-400">
               Start your journey now to experience seamless new AI generation tools!
             </p>
@@ -48,11 +48,11 @@ export default function TrialSection() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950  placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-black"
+                className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950  placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-black text-white font-medium   rounded-lg hover:bg-black/80 transition-colors"
+                className="w-full px-6 py-3 border border-white/30 text-white font-medium   rounded-lg hover:bg-white/10 transition-colors"
               >
                 Get Started
               </button>

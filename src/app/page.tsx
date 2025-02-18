@@ -89,8 +89,11 @@ And imagine how unstoppable you'll feel when you develop a unique and unbeatable
     "We are proud to be the ONLY A.I. education platform in the world with a Bolt.new training.",
   ]}
 />
+<Pricing />
 
-<JustTheTip tag="AI Tip #3"  title="Get ahead NOW. And STAY ahead." icon="💪"
+      <Benifits/>
+      <Testimonials />
+      <JustTheTip tag="AI Tip #3"  title="Get ahead NOW. And STAY ahead." icon="💪"
  description="I have a team of 6 full time employees who's sole job is to learn about new A.I. softwares which we immediately translate into trainings.."
   subheading="Progress is happening faster than ever...
 If there was a course or a training that came out 1 month ago.. It's no longer relevant.
@@ -110,10 +113,6 @@ Just like that, new softwares are coming out at the speed of light and if you're
     "As they say: Adapt.. Or Die !",
   ]}
 />
-      <Pricing />
-      <Benifits/>
-      <Testimonials />
-      
       <TrialSection />
 
       <CallToAction />
