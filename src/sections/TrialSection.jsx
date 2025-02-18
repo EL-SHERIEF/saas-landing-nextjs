@@ -48,7 +48,7 @@ export default function TrialSection() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950  placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-pink-500/50"
+                className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950  placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-black"
               />
               <button
                 type="submit"
