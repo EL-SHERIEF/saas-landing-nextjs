@@ -1,204 +1,60 @@
 'use client'
-import React, { useState } from 'react';
-import {
-  Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  Stack,
-  Text,
-  VStack,
-  useToast,
-} from '@chakra-ui/react';
-import { CreditCardIcon, AtSignIcon, LocationIcon } from '@chakra-ui/icons';
+import { useState } from "react";
 
-const PaymentForm = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    cardNumber: '',
-    cardExp: '',
-    cardCvc: '',
-  });
+export default function PaymentForm() {
+  const [cardHolder, setCardHolder] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [cvv, setCvv] = useState("");
 
-  const toast = useToast();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const formatCardNumber = (value: string) => {
+    return value.replace(/\D/g, "").slice(0, 16).match(/.{1,4}/g)?.join(" ") || "";
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Here you would integrate the payment gateway logic (e.g., Stripe)
-    toast({
-      title: 'Payment Successful',
-      description: 'Thank you for your purchase!',
-      status: 'success',
-      duration: 5000,
-      isClosable: true,
-    });
-
-    // Reset the form
-    setFormData({
-      fullName: '',
-      email: '',
-      address: '',
-      city: '',
-      state: '',
-      zip: '',
-      cardNumber: '',
-      cardExp: '',
-      cardCvc: '',
-    });
+  const formatExpiry = (value: string) => {
+    const sanitized = value.replace(/\D/g, "").slice(0, 4);
+    return sanitized.length > 2 ? `${sanitized.slice(0, 2)}/${sanitized.slice(2)}` : sanitized;
   };
 
   return (
-    <Box p={5} shadow="md" borderWidth="1px" maxWidth="500px" mx="auto" rounded="lg">
-      <VStack spacing={4} align="stretch">
-        <Text fontSize="2xl" fontWeight="bold" textAlign="center">
-          Payment Form
-        </Text>
-        <form onSubmit={handleSubmit}>
-          <Stack spacing={4}>
-            <FormControl isRequired>
-              <FormLabel htmlFor="fullName">Full Name</FormLabel>
-              <Input
-                id="fullName"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                placeholder="John Doe"
-                isRequired
-              />
-            </FormControl>
+    <div className="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-2xl shadow-lg">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Payment Details</h2>
+          <p className="text-gray-500">Complete your purchase securely</p>
+        </div>
 
-            <FormControl isRequired>
-              <FormLabel htmlFor="email">Email Address</FormLabel>
-              <InputGroup>
-                <InputLeftAddon children={<AtSignIcon />} />
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="example@email.com"
-                  isRequired
-                />
-              </InputGroup>
-            </FormControl>
+        <div className="relative h-48 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white float-animation">
+          <div className="absolute top-4 right-4">
+            <svg className="h-8" viewBox="0 0 48 48" fill="none">
+              <path d="M45 35c0 2.209-1.791 4-4 4H7c-2.209 0-4-1.791-4-4V13c0-2.209 1.791-4 4-4h34c2.209 0 4 1.791 4 4v22z" fill="#ffffff" />
+            </svg>
+          </div>
+          <div className="mt-16">
+            <div className="text-xl tracking-widest mb-2">{cardNumber || "•••• •••• •••• ••••"}</div>
+            <div className="flex justify-between">
+              <div>
+                <div className="text-xs opacity-75">Card Holder</div>
+                <div className="text-sm">{cardHolder || "YOUR NAME"}</div>
+              </div>
+              <div>
+                <div className="text-xs opacity-75">Expires</div>
+                <div className="text-sm">{expiry || "MM/YY"}</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <FormControl isRequired>
-              <FormLabel htmlFor="address">Billing Address</FormLabel>
-              <Input
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                placeholder="123 Main St"
-                isRequired
-              />
-            </FormControl>
-
-            <Stack direction="row" spacing={4}>
-              <FormControl isRequired>
-                <FormLabel htmlFor="city">City</FormLabel>
-                <Input
-                  id="city"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  placeholder="City"
-                  isRequired
-                />
-              </FormControl>
-
-              <FormControl isRequired>
-                <FormLabel htmlFor="state">State</FormLabel>
-                <Input
-                  id="state"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleChange}
-                  placeholder="State"
-                  isRequired
-                />
-              </FormControl>
-            </Stack>
-
-            <FormControl isRequired>
-              <FormLabel htmlFor="zip">ZIP Code</FormLabel>
-              <Input
-                id="zip"
-                name="zip"
-                value={formData.zip}
-                onChange={handleChange}
-                placeholder="Zip Code"
-                isRequired
-              />
-            </FormControl>
-
-            <FormControl isRequired>
-              <FormLabel htmlFor="cardNumber">Card Number</FormLabel>
-              <Input
-                id="cardNumber"
-                name="cardNumber"
-                type="text"
-                value={formData.cardNumber}
-                onChange={handleChange}
-                placeholder="1234 5678 9876 5432"
-                isRequired
-              />
-            </FormControl>
-
-            <Stack direction="row" spacing={4}>
-              <FormControl isRequired>
-                <FormLabel htmlFor="cardExp">Expiration Date</FormLabel>
-                <Input
-                  id="cardExp"
-                  name="cardExp"
-                  type="text"
-                  value={formData.cardExp}
-                  onChange={handleChange}
-                  placeholder="MM/YY"
-                  isRequired
-                />
-              </FormControl>
-
-              <FormControl isRequired>
-                <FormLabel htmlFor="cardCvc">CVC</FormLabel>
-                <Input
-                  id="cardCvc"
-                  name="cardCvc"
-                  type="text"
-                  value={formData.cardCvc}
-                  onChange={handleChange}
-                  placeholder="CVC"
-                  isRequired
-                />
-              </FormControl>
-            </Stack>
-
-            <Button type="submit" colorScheme="teal" width="full">
-              Pay Now
-            </Button>
-          </Stack>
+        <form className="mt-8 space-y-6">
+          <input type="text" className="block w-full p-3 border rounded-lg" placeholder="Card Holder Name" value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} />
+          <input type="text" className="block w-full p-3 border rounded-lg" placeholder="Card Number" value={cardNumber} onChange={(e) => setCardNumber(formatCardNumber(e.target.value))} maxLength={19} />
+          <div className="grid grid-cols-2 gap-4">
+            <input type="text" className="block w-full p-3 border rounded-lg" placeholder="MM/YY" value={expiry} onChange={(e) => setExpiry(formatExpiry(e.target.value))} maxLength={5} />
+            <input type="password" className="block w-full p-3 border rounded-lg" placeholder="CVV" value={cvv} onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))} maxLength={3} />
+          </div>
+          <button type="submit" className="w-full py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg">Pay Now</button>
         </form>
-      </VStack>
-    </Box>
+      </div>
+    </div>
   );
-};
-
-export default PaymentForm;
+}
