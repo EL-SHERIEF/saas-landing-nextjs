@@ -1,28 +1,33 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import productImage from '../assets/9b4b09799b6c775727eb850a7fd00fcf.webp';
 import Image from 'next/image';
+
 const StatsCard = ({ value, label }) => (
   <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center">
-    <div className="text-3xl font-semibold text-slate-950  mb-2">{value}</div>
+    <div className="text-3xl font-semibold text-slate-950 mb-2">{value}</div>
     <div className="text-zinc-400 text-sm">{label}</div>
   </div>
 );
 
-export default function JustTheTip() {
+export default function JustTheTip({
+  tag,
+  title,
+  icon,
+  description,
+  subheading,
+  emailPlaceholder,
+  stats,
+  footerText,
+  features,
+  productImage,
+  buttonText,
+  imageAlt,
+}) {
   const [email, setEmail] = useState('');
-
-  const stats = [
-    { value: '1M+', label: 'Student Users' },
-    { value: '950M+', label: 'Task Organized' },
-    { value: '70+', label: 'ran Companies' },
-    { value: '10M+', label: 'Users' },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Email submitted:', email);
   };
 
@@ -36,31 +41,23 @@ export default function JustTheTip() {
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
           >
-             <Image
-          src={productImage}
-          alt="Product Image"
-          className="max-w-[200px] max-h-[200px] sm:max-w-[150px] sm:max-h-[150px] object-cover rounded-2xl "
-        />
+            <Image
+              src={productImage}
+              alt={imageAlt}
+              fill
+              className="max-w-[200px] max-h-[200px] sm:max-w-[150px] sm:max-h-[150px] object-cover rounded-2xl "
+            />
           </motion.div>
-
-
 
           {/* Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-black mb-6">
-              <span className="text-green-400">⚡</span>
-              <span className="text-zinc-300 text-sm">AI Tip #1</span>
+              <span className="text-green-400">{icon}</span>
+              <span className="text-zinc-300 text-sm">{tag}</span>
             </div>
-            <h2 className="text-4xl font-semibold text-slate-950 mb-4">Always Be in The Know</h2>
-            <p className="text-zinc-400">
-              3 Months ago, Bolt.new released never-before-seen A.I. tech to the public..
-            </p>
-            <h3 className="text-lg my-10">
-              This technology is the most impactful technology ever released for development.
-              It's like 100 ChatGPTs working together at the same time to create world-class apps & websites.
-              If you've heard of Bolt.new... Then you're ahead of 99% of the population.
-              But if you're like most people... (Who didn't start using ChatGPT until 2024).. Then you're in the right place.
-            </h3>
+            <h2 className="text-4xl font-semibold text-slate-950 mb-4">{title}</h2>
+            <p className="text-zinc-400">{description}</p>
+            <h3 className="text-lg my-10">{subheading}</h3>
           </div>
 
           {/* Email Form */}
@@ -68,7 +65,7 @@ export default function JustTheTip() {
             <div className="flex gap-3 flex-wrap flex-row">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={emailPlaceholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-black"
@@ -77,24 +74,23 @@ export default function JustTheTip() {
                 type="submit"
                 className="w-full px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-black/80 transition-colors"
               >
-                Get Started
+                {buttonText}
               </button>
             </div>
           </form>
 
           <h3 className="text-center text-lg border border-zinc-700/20 p-10 rounded-2xl mb-10">
-            Only 6 months ago, these types of projects would cost $10,000+ in development costs and weeks of time..
-            I'm confident this software, and ones like it, are going to completely redefine the business landscape.
-            This software will make entire apps and websites in less than 30 seconds. Just 1 year ago, these same websites
-            and apps would cost $10,000+ and weeks of development time. The best part? It's publicly available for 100% free to create an account.
+            {footerText}
           </h3>
 
           {/* Features */}
           <div className="flex items-center justify-center gap-6 text-sm text-zinc-400 mb-12">
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              We are proud to be the ONLY A.I. education platform in the world with a Bolt.new training.
-            </div>
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <span className="text-green-400">✓</span>
+                {feature}
+              </div>
+            ))}
           </div>
 
           {/* Stats */}
