@@ -10,7 +10,7 @@ import { Features } from "@/sections/Features";
 import TrialSection from "@/sections/TrialSection";
 import InfoSection from "@/sections/Info";
 import productImage from '@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp'; // renamed to avoid conflict
-
+import JustTheTip from "@/sections/JustTheTip";
 export default function Home() {
   return (
     <div>
@@ -49,6 +49,7 @@ export default function Home() {
   image={productImage}
 />
          </div>
+         <JustTheTip />
       <Pricing />
       <Testimonials />
       <TrialSection />
