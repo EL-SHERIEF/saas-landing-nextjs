@@ -15,7 +15,7 @@ export const Header = () => {
       </div>
 
       <div className="py-5">
-        <div className="container">
+        <div className="container sm:px-0 md:max-w-[1200px] sm:max-w-[450px]">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="Saas logo" height={70} width={110} />
             <MenuIcon className="h-5 w-5 md:hidden" />

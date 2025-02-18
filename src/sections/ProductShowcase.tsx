@@ -1,58 +1,81 @@
-"use client";
-import productImage from "@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp";
-import pyramidImage from "@/assets/pyramid.png";
-import tubeImage from "@/assets/tube.png";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+'use client';
+import { StaticImageData } from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { ReactElement } from 'react';
 
-export const ProductShowcase = () => {
+interface ProductShowcaseProps {
+  bgGradient?: string;
+  tagText?: string;
+  headingText?: string;
+  headingGradient?: string;
+  descriptionText?: string;
+  pyramidImage?: StaticImageData;
+  tubeImage?: StaticImageData;
+  children: ReactElement;  // Accept React elements with props (like <Image />)
+}
+
+export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
+  bgGradient = 'bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF]',
+  tagText,
+  headingText = 'Get instant access to 99 automation bots',
+  headingGradient = 'bg-gradient-to-b from-black to-[#001E80]',
+  descriptionText = '',
+  pyramidImage,
+  tubeImage,
+  children,  // This will now accept elements like <Image />
+}) => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
-      <div className="container">
+    <section ref={sectionRef} className={`${bgGradient} py-24 overflow-x-clip`}>
+      <div className="md:max-w-[1000px] sm:max-w-[90%] mx-auto">
         <div className="max-w-[540px] mx-auto">
-          <div className="flex justify-center">
-            <div className="tag">Boost your productivity</div>
-          </div>
+          {tagText && (
+            <div className="flex justify-center">
+              <div className="tag">{tagText}</div>
+            </div>
+          )}
 
-          <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
-          Get instant access to 99 automation bots
+          <h2
+            className={`text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter ${headingGradient} text-transparent bg-clip-text mt-5`}
+          >
+            {headingText}
           </h2>
-          <p className="section-des mt-5">
-          so you’ll always stay ahead in a rapidly evolving market.
-          </p>
+
+          <p className="section-des mt-5">{descriptionText}</p>
         </div>
 
-        <div className="relative">
-          <Image src={productImage} alt="Product image" className="mt-10 rounded-2xl max-h-[600px] object-cover" />
-          <motion.img
-            src={pyramidImage.src}
-            alt="Pyramid image"
-            height={262}
-            width={262}
-            className="hidden md:block absolute -right-36 -top-32"
-            style={{
-              translateY: translateY,
-            }}
-          />
-          <motion.img
-            src={tubeImage.src}
-            alt="Tube image"
-            height={248}
-            width={248}
-            className="hidden md:block absolute bottom-24 -left-36"
-            style={{
-              translateY: translateY,
-            }}
-          />
+        <div className="relative flex flex-col justify-center items-center">
+          {/* Render the image passed as a child */}
+          {children}
+
+          {pyramidImage && (
+            <motion.img
+              src={pyramidImage.src}
+              alt="Pyramid image"
+              height={262}
+              width={262}
+              className="hidden md:block absolute -right-40 -top-32"
+              style={{ translateY }}
+            />
+          )}
+          {tubeImage && (
+            <motion.img
+              src={tubeImage.src}
+              alt="Tube image"
+              height={248}
+              width={248}
+              className="hidden md:block absolute bottom-12 -left-56"
+              style={{ translateY }}
+            />
+          )}
         </div>
       </div>
     </section>

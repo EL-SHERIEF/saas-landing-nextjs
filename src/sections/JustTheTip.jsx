@@ -19,8 +19,6 @@ export default function JustTheTip({
   icon,
   description,
   subheading,
-  emailPlaceholder,
-  stats,
   footerText,
   features,
   productImage,
@@ -99,13 +97,6 @@ export default function JustTheTip({
           {/* Email Form */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-12">
             <div className="flex gap-3 flex-wrap flex-row">
-              <input
-                type="email"
-                placeholder={emailPlaceholder}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-3 rounded-lg bg-white border border-zinc-700/50 text-slate-950 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-black"
-              />
               <button
                 type="submit"
                 className="w-full px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-black/80 transition-colors"
@@ -120,7 +111,7 @@ export default function JustTheTip({
           </h3>
 
           {/* Features */}
-          <div className="flex items-center justify-center gap-6 text-sm text-zinc-400 mb-12">
+          <div className="flex items-center justify-center gap-6 text-sm text-zinc-400 mb-0">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
                 <span className="text-green-400">✓</span>
@@ -129,12 +120,7 @@ export default function JustTheTip({
             ))}
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((stat, index) => (
-              <StatsCard key={index} {...stat} />
-            ))}
-          </div>
+        
         </div>
       </div>
     </div>

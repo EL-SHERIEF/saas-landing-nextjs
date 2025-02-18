@@ -20,27 +20,29 @@ export const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip"
-      style={{ background: "radial-gradient(ellipse 200% 100% at bottom left, #183EC2, #EAEEFE 100%)" }}
+      className="pt-8 pb-20 md:pt-0 md:pb-10 overflow-x-clip"
+      style={{ background: "radial-gradient(ellipse 200% 50% at bottom left, #183EC2, #EAEEFE 100%)" }}
     >
-      <div className="container">
+      <div className="max-w-[1200px] mx-auto px-4">
         <div className="md:flex items-center">
-          <div className="md:w-[478px]">
+          <div className="md:w-[750px]">
             <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
-              Version 2.0 is here
+            LIMITED TIME SPECIAL: New Customers ONLY!
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-             $1 Pathway to productivity
+            <h1 className="text-4xl md:text-[2.5rem]/[1.1] font-bold tracking-tighter bg-gradient-to-l from-black to-[#00114a] text-transparent bg-clip-text mt-6">
+            Gain an Unbeatable A.I. Edge 
+            <span className=" bg-gradient-to-b from-[#0046ae] to-[#003cff] text-transparent bg-clip-text"> With 99 Powerful Bots </span> 
+            To Automate 90% Of Your Tasks and Slash
+            <span className=" bg-gradient-to-b from-[#0046ae] to-[#003cff] text-transparent bg-clip-text"> $10k in Costs </span>
+             in 2025
+             <span className=" bg-gradient-to-b from-[#0046ae] to-[#003cff] text-transparent bg-clip-text"> For Just $1 </span>
+
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-            Gain 99 Powerful Bots To Automate 90% Of Your Tasks and Slash $10k in Costs in 2025 For Just $1
+            Get instant access to 99 automation bots —so you’ll always stay ahead in a rapidly evolving market.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <Link href={'#pricing'} className="btn btn-primary">Get for $1</Link>
-              <Link href={'#features'} className="btn btn-text flex gap-1">
-                <span>Learn more</span>
-                {/* <ArrowIcon classname="h-2 w-2" /> */}
-              </Link>
+              <Link href={'#pricing'} className="btn btn-primary px-4 py-3 hover:scale-[102%] hover:translate-x-2 transition-all ease-in-out">CLAIM 99 BOTS FOR $1</Link><p className="text-[#00000091] mx-4">(Resellers Rights Included)</p>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
