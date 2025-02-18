@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import paperTexture from '@/assets/paper-texture.png'; // Ensure the path is correct
 
 const StatsCard = ({ value, label }) => (
   <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center">
@@ -10,7 +11,7 @@ const StatsCard = ({ value, label }) => (
   </div>
 );
 
-export default function JustTheTip({
+export default function Paper({
   tag,
   title,
   icon,
@@ -34,7 +35,7 @@ export default function JustTheTip({
   return (
     <div className="bg-white px-4 py-24 !max-w-screen">
       <div className="max-w-3xl mx-auto">
-        <div className="backdrop-blur-sm bg-white/50 rounded-3xl border border-zinc-800/10 p-12 relative">
+        <div className="relative bg-white/20 bg-cover bg-no-repeat p-12 rounded-3xl shadow-xl backdrop-blur-md" style={{ backgroundImage: `url(${paperTexture.src})` }}>
           {/* Floating Tag Cards */}
           <motion.div
             className="absolute -top-10 -right-10 sm:-right-2 sm:-top-16 transform -translate-x-16 -translate-y-8"
@@ -58,6 +59,30 @@ export default function JustTheTip({
             <h2 className="text-4xl font-semibold text-slate-950 mb-4">{title}</h2>
             <p className="text-zinc-400">{description}</p>
             <h3 className="text-lg my-10">{subheading}</h3>
+          </div>
+
+          {/* Modern Letter Design */}
+          <div className="bg-white/30 backdrop-blur-lg p-8 rounded-3xl mb-8 text-center">
+            <p className="text-lg text-white mb-6">I'm going to ask you for ONE favor..</p>
+            <p className="text-lg text-white mb-6">It's not a BIG favor..</p>
+            <p className="text-lg text-white mb-6">In fact, it's a favor so small it's not even worth mentioning.</p>
+
+            <p className="text-lg text-white mb-6">We are going to give you a sneak peek of our new dashboard..</p>
+            <p className="text-lg text-white mb-6">All we ask is that 7 days later, you give us feedback on our platform.</p>
+
+            <p className="text-lg text-white mb-6">Inside, you'll get access to your bots and step-by-step trainings on how to implement them..</p>
+
+            <p className="text-lg text-white mb-6">In fact, it's a favor so small it's not even worth mentioning.</p>
+
+            <p className="text-lg text-white mb-6">All I ask from you, is when these 99 bots help you save time, money, and make you more productive, is that you share them with your friends and family.</p>
+
+            <p className="text-lg text-white mb-6">Together, we will help usher in the new Age of Abundance.</p>
+
+            <p className="text-lg text-white mb-6">Enjoy!</p>
+
+            <p className="mt-12 text-3xl text-white font-bold">Sam Blake</p>
+            <p className="text-xl text-white font-semibold italic">Founder</p>
+            <p className="text-md text-white opacity-75">AI Pro University</p>
           </div>
 
           {/* Email Form */}

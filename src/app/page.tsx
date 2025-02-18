@@ -11,7 +11,6 @@ import TrialSection from "@/sections/TrialSection";
 import InfoSection from "@/sections/Info";
 import productImage from '@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp'; // renamed to avoid conflict
 import JustTheTip from "@/sections/JustTheTip";
-import LetterSection from "@/sections/LetterSection";
 export default function Home() {
   return (
     <div>
@@ -89,7 +88,6 @@ And imagine how unstoppable you'll feel when you develop a unique and unbeatable
     "We are proud to be the ONLY A.I. education platform in the world with a Bolt.new training.",
   ]}
 />
-<LetterSection />
 
 <JustTheTip tag="AI Tip #3"  title="Get ahead NOW. And STAY ahead." icon="💪"
  description="I have a team of 6 full time employees who's sole job is to learn about new A.I. softwares which we immediately translate into trainings.."
