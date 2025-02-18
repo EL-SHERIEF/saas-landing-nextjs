@@ -6,6 +6,7 @@ import noodleImage from "@/assets/noodle.png";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import Link from "next/link";
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -35,11 +36,11 @@ export const Hero = () => {
             Gain 99 Powerful Bots To Automate 90% Of Your Tasks and Slash $10k in Costs in 2025 For Just $1
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Get for $1</button>
-              <button className="btn btn-text flex gap-1">
+              <Link href={'#pricing'} className="btn btn-primary">Get for $1</Link>
+              <Link href={'#features'} className="btn btn-text flex gap-1">
                 <span>Learn more</span>
                 {/* <ArrowIcon classname="h-2 w-2" /> */}
-              </button>
+              </Link>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">

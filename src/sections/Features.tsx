@@ -18,7 +18,7 @@ export const Features = () => {
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container">
-        <div className="max-w-[540px] mx-auto">
+        <div className="max-w-[540px] mx-auto" id="features">
           <div className="flex justify-center">
             <div className="tag">Boost your productivity</div>
           </div>
