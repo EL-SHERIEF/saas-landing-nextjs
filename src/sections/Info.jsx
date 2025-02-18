@@ -26,8 +26,8 @@ const InfoSection = ({ title, image, brief, tag, align = 'right' }) => {
     >
       <div className="w-full md:w-2/3 lg:w-[65%] px-4 flex flex-col justify-start gap-4">
         <span className="tag w-fit">{tag}</span>
-        <h2 className=" text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">{title}</h2>
-        <p className="section-des mt-5 text-start">{brief}</p>
+        <h2 className=" text-3xl md:text-[50px] md:leading-[55px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">{title}</h2>
+        <p className="section-des my-5 text-start text-lg">{brief}</p>
       </div>
       <motion.div
         style={{ x, opacity }}
