@@ -22,21 +22,21 @@ const InfoSection = ({ title, image, brief, tag, align = 'right' }) => {
   return (
     <section
       ref={sectionRef}
-      className="sm:w-[80%] w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between p-8 relative"
+      className="w-full max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between lg:py-36 sm:py-16 md:py-36 relative"
     >
-      <div className="w-[60%] px-4 flex flex-col justify-start gap-4">
-        <span className="text-xs text-white bg-black rounded-lg px-3 py-2 w-fit">{tag}</span>
-        <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
-        <p className="text-lg text-gray-600 mt-2">{brief}</p>
+      <div className="w-full md:w-2/3 lg:w-[65%] px-4 flex flex-col justify-start gap-4">
+        <span className="tag w-fit">{tag}</span>
+        <h2 className=" text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">{title}</h2>
+        <p className="section-des mt-5 text-start">{brief}</p>
       </div>
       <motion.div
         style={{ x, opacity }}
-        className="md:w-1/3 mt-6 md:mt-0 overflow-hidden bg-white rounded-xl shadow-lg backdrop-blur-sm"
+        className="w-full px-4 md:w-1/3 my-6 md:mt-0"
       >
         <Image
           src={image || productImage}
           alt="Product Image"
-          className="w-full h-auto"
+          className="w-full h-auto object-cover rounded-xl shadow-lg"
         />
       </motion.div>
     </section>
