@@ -24,7 +24,89 @@ export default function PaymentForm() {
           <p className="text-gray-500">Complete your purchase securely</p>
         </div>
 
-        <div className="relative h-48 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white float-animation">
+        <form className="mt-8 space-y-6">
+          {/* Full Name */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="FullName" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder="Full Name" 
+            />
+            <label htmlFor="FullName" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Full Name
+            </label>
+          </div>
+
+          {/* Email */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="Email" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder="Email" 
+            />
+            <label htmlFor="Email" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Email
+            </label>
+          </div>
+
+          <p className="text-gray-500">Billing address</p>
+
+          {/* Address */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="address" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder=" " 
+            />
+            <label htmlFor="address" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Full Address
+            </label>
+          </div>
+
+          {/* City */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="city" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder="City" 
+            />
+            <label htmlFor="city" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              City
+            </label>
+          </div>
+
+          {/* Country */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="country" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder=" " 
+            />
+            <label htmlFor="country" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Country
+            </label>
+          </div>
+
+          {/* ZIP Code */}
+          <div className="relative">
+            <input 
+              type="text" 
+              id="zip" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder=" " 
+            />
+            <label htmlFor="zip" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              ZIP Code
+            </label>
+          </div>
+
+          {/* Card Information */}
+            <div className="relative h-48 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white float-animation">
           <div className="absolute top-4 right-4">
             <svg className="h-8" viewBox="0 0 48 48" fill="none">
               <path d="M45 35c0 2.209-1.791 4-4 4H7c-2.209 0-4-1.791-4-4V13c0-2.209 1.791-4 4-4h34c2.209 0 4 1.791 4 4v22z" fill="#ffffff" />
@@ -44,14 +126,67 @@ export default function PaymentForm() {
             </div>
           </div>
         </div>
-
-        <form className="mt-8 space-y-6">
-          <input type="text" className="block w-full p-3 border rounded-lg" placeholder="Card Holder Name" value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} />
-          <input type="text" className="block w-full p-3 border rounded-lg" placeholder="Card Number" value={cardNumber} onChange={(e) => setCardNumber(formatCardNumber(e.target.value))} maxLength={19} />
-          <div className="grid grid-cols-2 gap-4">
-            <input type="text" className="block w-full p-3 border rounded-lg" placeholder="MM/YY" value={expiry} onChange={(e) => setExpiry(formatExpiry(e.target.value))} maxLength={5} />
-            <input type="password" className="block w-full p-3 border rounded-lg" placeholder="CVV" value={cvv} onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))} maxLength={3} />
+          <div className="relative">
+            <input 
+              type="text" 
+              id="cardHolderName" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder=" " 
+              value={cardHolder} 
+              onChange={(e) => setCardHolder(e.target.value)} 
+            />
+            <label htmlFor="cardHolderName" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Card Holder Name
+            </label>
           </div>
+
+          <div className="relative">
+            <input 
+              type="text" 
+              id="cardNumber" 
+              className="block w-full p-3 border rounded-lg" 
+              placeholder=" " 
+              value={cardNumber} 
+              onChange={(e) => setCardNumber(formatCardNumber(e.target.value))} 
+              maxLength={19}
+            />
+            <label htmlFor="cardNumber" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+              Card Number
+            </label>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative">
+              <input 
+                type="text" 
+                id="expiry" 
+                className="block w-full p-3 border rounded-lg" 
+                placeholder=" " 
+                value={expiry} 
+                onChange={(e) => setExpiry(formatExpiry(e.target.value))} 
+                maxLength={5}
+              />
+              <label htmlFor="expiry" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+                MM/YY
+              </label>
+            </div>
+
+            <div className="relative">
+              <input 
+                type="password" 
+                id="cvv" 
+                className="block w-full p-3 border rounded-lg" 
+                placeholder=" " 
+                value={cvv} 
+                onChange={(e) => setCvv(e.target.value.replace(/\D/g, "").slice(0, 3))} 
+                maxLength={3}
+              />
+              <label htmlFor="cvv" className="absolute left-3 -mt-3 px-1 top-0 bg-white text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+                CVV
+              </label>
+            </div>
+          </div>
+
           <button type="submit" className="w-full py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg">Pay Now</button>
         </form>
       </div>
