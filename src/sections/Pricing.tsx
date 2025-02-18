@@ -53,7 +53,7 @@ export const Pricing = () => {
             <div
               key={title}
               className={twMerge(
-                "p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full",
+                "p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full box-content",
                 inverse === true && "border-black bg-black text-white"
               )}
             >
