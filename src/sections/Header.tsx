@@ -2,7 +2,7 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/darkLogo.png";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
-
+import Link from "next/link";
 export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
@@ -25,9 +25,9 @@ export const Header = () => {
               <a href="">Custmers</a>
               <a href="">Updates</a>
               <a href="">Help</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
+              <Link href={'#pricing'} className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
                 Get Now
-              </button>
+              </Link>
             </nav>
           </div>
         </div>

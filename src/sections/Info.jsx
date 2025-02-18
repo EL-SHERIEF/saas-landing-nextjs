@@ -22,10 +22,10 @@ const InfoSection = ({ title, image, brief, tag, align = 'right' }) => {
   return (
     <section
       ref={sectionRef}
-      className="w-full max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between lg:py-36 sm:py-16 md:py-36 relative"
+      className="bg-[#d2dcff] sm:px-12 overflow-hidden w-full max-w-screen mx-auto flex flex-col md:flex-row items-center justify-between lg:py-36 sm:py-16 md:py-36 relative "
     >
-      <div className="w-full md:w-2/3 lg:w-[65%] px-4 flex flex-col justify-start gap-4">
-        <span className="tag w-fit">{tag}</span>
+      <div className="w-full md:w-2/3 lg:w-[60%] px-4 flex flex-col justify-start gap-4">
+        <span className="tag w-fit text-white bg-gradient-to-b from-black to-[#001E80] ">{tag}</span>
         <h2 className=" text-3xl md:text-[50px] md:leading-[55px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">{title}</h2>
         <p className="section-des my-5 text-start text-lg">{brief}</p>
       </div>
