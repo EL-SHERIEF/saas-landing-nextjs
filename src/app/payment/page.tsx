@@ -106,7 +106,7 @@ export default function PaymentForm() {
           </div>
 
           {/* Card Information */}
-            <div className="relative h-48 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-6 text-white float-animation">
+            <div className="relative h-48 bg-gradient-to-r from-black to-black/60 rounded-xl p-6 text-white float-animation">
           <div className="absolute top-4 right-4">
             <svg className="h-8" viewBox="0 0 48 48" fill="none">
               <path d="M45 35c0 2.209-1.791 4-4 4H7c-2.209 0-4-1.791-4-4V13c0-2.209 1.791-4 4-4h34c2.209 0 4 1.791 4 4v22z" fill="#ffffff" />
