@@ -18,7 +18,8 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <ProductShowcase />
-      <InfoSection 
+      <Features />
+      <InfoSection align="left"
   tag="limited-offer" 
   title="Limited Time Special: 99 A.I. Automation Bots For Just $1 – New Customers ONLY!" 
   brief="Unlock a groundbreaking offer with 99 powerful automation bots meticulously curated from top A.I. technologies. Automate 90% of your tasks and slash your operating costs by $10K in 2025. Embrace an unbeatable A.I. edge with full reseller rights and secure your future today." 
@@ -37,6 +38,7 @@ export default function Home() {
   title="Revolutionize Your Workflow: 99 Bots That Transform Your Productivity" 
   brief="Imagine having 99 digital assistants at your command – automating tasks from Excel formulas and customer support to app development, content creation, and business strategy. These bots are engineered to save you time, reduce costs, and empower you to focus on growth and innovation." 
   image={productImage}
+  align="left"
 />
 
 <InfoSection 
@@ -45,12 +47,9 @@ export default function Home() {
   brief="At A.I. Pro University, our mission is to empower over 1 million students through transformative A.I. education. With our ‘10X Productivity or Personal Coaching or Your Money Back’ guarantee, you’re not just investing in technology – you’re stepping into a future of boundless opportunity and abundance." 
   image={productImage}
 />
-
-
-      <Features />
       <Pricing />
-      <TrialSection />
       <Testimonials />
+      <TrialSection />
       <CallToAction />
       <Footer />
     </div>
