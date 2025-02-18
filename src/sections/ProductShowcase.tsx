@@ -24,11 +24,10 @@ export const ProductShowcase = () => {
           </div>
 
           <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
-            A more effective way to track progress
+          Get instant access to 99 automation bots
           </h2>
           <p className="section-des mt-5">
-            Effortlessly turn your ideas into a fully functional, responsive, SaaS website in just minutes
-            with this template.
+          so you’ll always stay ahead in a rapidly evolving market.
           </p>
         </div>
 
