@@ -93,15 +93,7 @@ export default function JustTheTip() {
           <div className="flex items-center justify-center gap-6 text-sm text-zinc-400 mb-12">
             <div className="flex items-center gap-2">
               <span className="text-green-400">✓</span>
-              99 PAID Bots
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              Just for 1$
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              Cancel anytime
+              We are proud to be the ONLY A.I. education platform in the world with a Bolt.new training.
             </div>
           </div>
 

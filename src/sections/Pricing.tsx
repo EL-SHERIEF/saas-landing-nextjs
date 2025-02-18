@@ -20,7 +20,7 @@ const pricingTiers = [
   },
   {
     title: "For New Customers",
-    monthlyPrice: 1,
+    monthlyPrice: '1 /month',
     buttonText: "ONLY 1$",
     popular: true,
     inverse: true,

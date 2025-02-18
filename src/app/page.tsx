@@ -18,22 +18,14 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <ProductShowcase />
-      <Features />
-         <div className="bg-gradient-to-b to-[#FFFFFF] from-[#D2DCFF] border-b border-[#e3e3e3]">
-         <InfoSection align="left"
+      <InfoSection align="left"
   tag="limited-offer" 
   title="Limited Time Special: 99 A.I. Automation Bots For Just $1 – New Customers ONLY!" 
   brief="Unlock a groundbreaking offer with 99 powerful automation bots meticulously curated from top A.I. technologies. Automate 90% of your tasks and slash your operating costs by $10K in 2025. Embrace an unbeatable A.I. edge with full reseller rights and secure your future today." 
   image={productImage}
 />
-
-<InfoSection 
-  tag="welcome" 
-  title="Welcome to A.I. Pro University – Your Gateway to A.I. Mastery and Productivity" 
-  brief="I’m Sam Blake, founder of A.I. Pro University. We’re dedicated to revolutionizing your productivity with our state-of-the-art automation tools. Experience the power of 99 transformative bots for just $1 and see how our cutting-edge solutions can elevate your business and creative endeavors." 
-  image={productImage}
-/>
-
+      <Features />
+         <div className="bg-gradient-to-b to-[#FFFFFF] from-[#D2DCFF] border-b border-[#e3e3e3]">
 <InfoSection 
   tag="bot-benefits" 
   title="Revolutionize Your Workflow: 99 Bots That Transform Your Productivity" 
@@ -50,6 +42,13 @@ export default function Home() {
 />
          </div>
          <JustTheTip />
+         <InfoSection 
+  tag="welcome" 
+  title="Welcome to A.I. Pro University – Your Gateway to A.I. Mastery and Productivity" 
+  brief="I’m Sam Blake, founder of A.I. Pro University. We’re dedicated to revolutionizing your productivity with our state-of-the-art automation tools. Experience the power of 99 transformative bots for just $1 and see how our cutting-edge solutions can elevate your business and creative endeavors." 
+  image={productImage}
+/>
+
       <Pricing />
       <Testimonials />
       <TrialSection />
