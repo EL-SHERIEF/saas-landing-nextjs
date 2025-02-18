@@ -20,18 +20,23 @@ export const Features = () => {
       <div className="container">
         <div className="max-w-[540px] mx-auto" id="features">
           <div className="flex justify-center">
-            <div className="tag">Boost your productivity</div>
+            <div className="tag">BONUS            </div>
           </div>
 
           <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
-          Get instant access to 99 automation bots
+          2 DAY FULL ACCESS PASS TO OUR UNIVERSITY
           </h2>
           <p className="section-des mt-5">
-          so you’ll always stay ahead in a rapidly evolving market.
+          For 2 Days you get unlimited access to our university.
           </p>
         </div>
 
-        <div className="relative">
+            {/* 
+            
+            
+            
+            
+              <div className="relative">
          <div className="relative flex flex-row flex-wrap align-top justify-start gap-3 pt-10">
           <div className="bg-white flex flex-col gap-6 p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full">
             <div className="icon">
@@ -121,6 +126,11 @@ export const Features = () => {
             }}
           />
         </div>
+            
+            
+            
+            */}
+
       </div>
     </section>
   );

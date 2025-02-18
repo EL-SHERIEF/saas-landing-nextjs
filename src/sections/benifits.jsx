@@ -15,12 +15,15 @@ const automationList = [
 export default function AutomationSection() {
   return (
     <section className="bg-gray-50 py-16 px-6 text-center" id='benifits'>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto flex justify-center items-center flex-col">
         <h2 className="text-center text-3xl md:text-[50px] md:leading-[50px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
-          Whether you're using a free or paid ChatGPT account, these powerful AI bots will automate any task & save tens of thousands of dollars.
+        99 Custom Automation Bots
         </h2>
-        <p className="section-des mt-5 text-xl">
-          Here's what you will automate:
+        <p className="section-des mt-5 text-2xl">
+        Whether you're using a free or a paid ChatGPT account, these powerful AI bots will automate any task & save tens of thousands of dollars.
+        </p>
+        <p className="section-des mt-5 text-sm border border-black/20 text-black/60 rounded-xl w-fit px-4 py-2">
+          Here's what you will automate
         </p>
       </div>
 

@@ -208,42 +208,38 @@ AI Pro University
       {/* DONE  MILLION DOLLAR QUESTION*/}
 
 <ProductShowcase
-headingText="Why on EARTH would we do this?"
+headingText="So Here's The Million Dollar Question.."
  pyramidImage={pyramidImage}
 tubeImage={tubeImage} >
  <div  className="mt-10" >
   <div className="flex flex-col align-top justify-center gap-3">
   <div className="relative flex flex-col items-start justify-center gap-3  rounded-2xl bg-white p-8 ">
   <span className="absolute -top-4 -left-4 bg-gradient-to-b from-black to-[#001E80] text-white w-10 h-10 min-w-10 min-h-10 text-2xl rounded-lg flex justify-center align-center items-center">
-  1</span>  
+  ?</span>  
   <h2 className=" flex flex-row items-center gap-3 text-2xl md:text-[24px] md:leading-[30px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
-  
-    It doesn't cost me a dime to hand them over​
+  Are you ready to stop trading time for money and 10x your productivity so you can focus on making money?
   </h2>
   <p className=""> Our students originally built most of these bots using ChatGPT. Each bot is publicly available code that we’ve curated, organized, and tested. Now, we’re packing them all into one seamless bundle—and can freely share them with you.</p>
   </div>
   <div className="relative flex flex-col items-start justify-center gap-3  rounded-2xl bg-white p-6 ">
-  <span className="absolute -top-4 -left-4 bg-gradient-to-b from-black to-[#001E80] text-white w-10 h-10 min-w-10 min-h-10 text-2xl rounded-lg flex justify-center align-center items-center">
-  2</span>  
+ 
   <h2 className=" flex flex-row items-center gap-3 text-2xl md:text-[24px] md:leading-[30px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text"> 
-  We’re ‘Bribing’ You into a Long-Term Relationship.
+  If so, these 99 bots are your automating 90% of your tasks and saving $10,000's - even if you're using a free ChatGPT account.
   </h2>
   <p className="">
-  We know these 99 bots will have you wondering what else A.I. can do for you. And after you see how quickly they cut through your workload, we hope you’ll trust
-A.I. Pro University to be your go-to resource for the next wave of automation breakthroughs.
-
+  Sam Blake
+Founder, CEO
+AI Pro University
   </p>
   </div>
-
  </div>
  </div>
 </ProductShowcase>
+<Benifits/>
 
 <Features />
 
 <Pricing />
-
-      <Benifits/>
       <Testimonials />
 
       <TrialSection />
