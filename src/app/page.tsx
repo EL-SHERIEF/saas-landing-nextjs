@@ -9,7 +9,7 @@ import { Testimonials } from "@/sections/Testimonials";
 import { Features } from "@/sections/Features";
 import TrialSection from "@/sections/TrialSection";
 import InfoSection from "@/sections/Info";
-import productImage from '@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp'; // renamed to avoid conflict
+import productImage from '@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp'; 
 import JustTheTip from "@/sections/JustTheTip";
 import Benifits from "@/sections/benifits";
 export default function Home() {
@@ -51,7 +51,7 @@ If you've heard of Bolt.new.. Then you're ahead of 99% of the population.
 But if you're like most people.. (Who didn't start using ChatGPT until 2024).. Then you're in the right place."
   emailPlaceholder="Enter your email"  buttonText="Get Started"
   footerText="Only 6 months ago, these type of projects would cost $10,000+ in development costs and weeks of time.. I'm confident this software, and ones like it, are going to completely redefine the business landscape. This software will make entire apps and websites in less than 30 seconds. Just 1 year ago, these same websites and apps would cost $10,000+ and weeks of development time."
-  productImage="/path/to/your/image.webp"
+  productImage={productImage}
   imageAlt="Product Image"
   stats={[
     { value: '1M+', label: 'Student Users' },
@@ -77,7 +77,7 @@ But if you're like most people.. (Who didn't start using ChatGPT until 2024).. T
   emailPlaceholder="Enter your email"  buttonText="Get Started"
   footerText="Imagine what sort of impact you are going to make in this world now that you have the same power as fortune 500 companies. 99 Employees that will work day or night for you, for free.
 And imagine how unstoppable you'll feel when you develop a unique and unbeatable 'AI Advantage' with over 99 custom A.I. bots that automate 90% of your tasks."
-  productImage="/path/to/your/image.webp"
+  productImage={productImage}
   imageAlt="Product Image"
   stats={[
     { value: '1M+', label: 'Student Users' },
@@ -93,7 +93,7 @@ And imagine how unstoppable you'll feel when you develop a unique and unbeatable
 
       <Benifits/>
       <Testimonials />
-      <JustTheTip tag="AI Tip #3"  title="Get ahead NOW. And STAY ahead." icon="💪"
+      <JustTheTip tube={false} tag="AI Tip #3"  title="Get ahead NOW. And STAY ahead." icon="💪"
  description="I have a team of 6 full time employees who's sole job is to learn about new A.I. softwares which we immediately translate into trainings.."
   subheading="Progress is happening faster than ever...
 If there was a course or a training that came out 1 month ago.. It's no longer relevant.
@@ -101,7 +101,7 @@ If there was a course or a training that came out 1 month ago.. It's no longer r
 Just like that, new softwares are coming out at the speed of light and if you're not using what everyone else is using, you get dropped down to the lowest totem on the pole."
   emailPlaceholder="Enter your email"  buttonText="Get Started"
   footerText="That why we update our trainings. DAILY . And now, for just $1, you can get your hands on 99 powerful A.I. Bots— with Reseller Rights included —so you can stay miles ahead of the pack."
-  productImage="/path/to/your/image.webp"
+  productImage={productImage}
   imageAlt="Product Image"
   stats={[
     { value: '1M+', label: 'Student Users' },

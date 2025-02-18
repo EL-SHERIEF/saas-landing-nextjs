@@ -1,7 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import tubeImage from "@/assets/tube.png";
+import pyramidImage from "@/assets/pyramid.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const StatsCard = ({ value, label }) => (
   <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center">
@@ -23,6 +26,7 @@ export default function JustTheTip({
   productImage,
   buttonText,
   imageAlt,
+  tube = true // Default tube to true
 }) {
   const [email, setEmail] = useState('');
 
@@ -31,21 +35,53 @@ export default function JustTheTip({
     console.log('Email submitted:', email);
   };
 
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <div className="bg-white px-4 py-24 !max-w-screen">
+    <div ref={sectionRef} className="bg-white px-4 py-24 !max-w-screen">
       <div className="max-w-3xl mx-auto">
         <div className="backdrop-blur-sm bg-white/50 rounded-3xl border border-zinc-800/10 p-12 relative">
+          {/* Conditional Rendering */}
+          {tube ? (
+            <motion.img
+              src={tubeImage.src}
+              alt="Tube image"
+              height={248}
+              width={248}
+              className="hidden md:block absolute bottom-24 -left-36"
+              style={{
+                translateY: translateY,
+              }}
+            />
+          ) : (
+            <motion.img
+              src={pyramidImage.src}
+              alt="Pyramid image"
+              height={262}
+              width={262}
+              className="hidden md:block absolute -right-36 -top-32 z-10"
+              style={{
+                translateY: translateY,
+              }}
+            />
+          )}
           {/* Floating Tag Cards */}
           <motion.div
-            className="absolute -top-10 -right-10 sm:-right-2 sm:-top-16 transform -translate-x-16 -translate-y-8"
+            className="absolute -top-10 -right-10 sm:-right-2 sm:-top-16 transform -translate-x-16 -translate-y-8 z-0"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
           >
             <Image
               src={productImage}
               alt={imageAlt}
-              fill
-              className="max-w-[200px] max-h-[200px] sm:max-w-[150px] sm:max-h-[150px] object-cover rounded-2xl "
+              width={200} height={200}
+              className="max-w-[200px] max-h-[200px] sm:max-w-[150px] sm:max-h-[150px] object-cover rounded-2xl z-0"
             />
           </motion.div>
 
