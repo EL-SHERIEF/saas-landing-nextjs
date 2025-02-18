@@ -25,7 +25,7 @@ export default function TrialSection() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-24">
+    <div className=" bg-white px-4 py-24 !max-w-screen">
       <div className="max-w-3xl mx-auto">
         <div className="backdrop-blur-sm bg-white/50 rounded-3xl border border-zinc-800/10 p-12">
           {/* Header */}
