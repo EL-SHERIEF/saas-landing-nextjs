@@ -14,7 +14,7 @@ const automationList = [
 
 export default function AutomationSection() {
   return (
-    <section className="bg-gray-50 py-16 px-6 text-center">
+    <section className="bg-gray-50 py-16 px-6 text-center" id='benifits'>
       <div className="max-w-4xl mx-auto">
         <h2 className="text-center text-3xl md:text-[50px] md:leading-[50px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
           Whether you're using a free or paid ChatGPT account, these powerful AI bots will automate any task & save tens of thousands of dollars.

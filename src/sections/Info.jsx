@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import productImage from '../assets/product-image.png';
 
-const InfoSection = ({ title, image, brief, tag, align = 'right' }) => {
+const InfoSection = ({ title, image, brief, tag, align = 'right',id }) => {
   const sectionRef = useRef(null);
 
   // Track scroll progress for the section
@@ -20,7 +20,7 @@ const InfoSection = ({ title, image, brief, tag, align = 'right' }) => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section
+    <section id={id}
       ref={sectionRef}
       className="bg-white sm:px-12 overflow-hidden w-full max-w-screen flex flex-col md:flex-row items-center justify-between lg:py-36 sm:py-16 md:py-36 relative "
     >
