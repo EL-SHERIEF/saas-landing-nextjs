@@ -6,8 +6,8 @@ import Link from "next/link";
 const pricingTiers = [
   {
     title: "For Regular Customers",
-    monthlyPrice: 1,
-    buttonText: "Get it for a $1",
+    monthlyPrice: '299.99',
+    buttonText: "renew now",
     popular: false,
     inverse: false,
     features: [
@@ -20,7 +20,7 @@ const pricingTiers = [
   },
   {
     title: "For New Customers",
-    monthlyPrice: '1 /month',
+    monthlyPrice: '1',
     buttonText: "ONLY 1$",
     popular: true,
     inverse: true,
@@ -42,9 +42,10 @@ export const Pricing = () => {
     <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title" id="pricing">Pricing</h2>
+          <h2 className="section-title" id="pricing">Your Price Today: $1          </h2>
           <p className="section-des mt-5">
-            Free forever. Upgrade for unlimited tasks, better security, and exclusive features.
+          ONLY 500 FIRST TIME CUSTOMERS ACCEPTED AT THIS PRICE BEFORE.
+          THE PRICE GOES BACK UP TO $299.99
           </p>
         </div>
 
