@@ -187,7 +187,7 @@ export default function PaymentForm() {
             </div>
           </div>
 
-          <button type="submit" className="w-full py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg">Pay Now</button>
+          <button type="submit" className="w-full py-3 text-white bg-black hover:bg-black/80 duration-150 rounded-lg">Pay Now</button>
         </form>
       </div>
     </div>
