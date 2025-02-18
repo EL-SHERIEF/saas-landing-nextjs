@@ -11,6 +11,7 @@ import TrialSection from "@/sections/TrialSection";
 import InfoSection from "@/sections/Info";
 import productImage from '@/assets/9b4b09799b6c775727eb850a7fd00fcf.webp'; // renamed to avoid conflict
 import JustTheTip from "@/sections/JustTheTip";
+import Benifits from "@/sections/benifits";
 export default function Home() {
   return (
     <div>
@@ -110,6 +111,7 @@ Just like that, new softwares are coming out at the speed of light and if you're
   ]}
 />
       <Pricing />
+      <Benifits/>
       <Testimonials />
       
       <TrialSection />
